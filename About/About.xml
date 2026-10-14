@@ -12,8 +12,8 @@
 		<li>1.7</li>
 	</supportedVersions>
 	<description>
-Allows ancient dangers to spawn on encounter maps and campsites from the [u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3234938357]Set up Camps[/url][/u] Mod.
-	
+Allows ancient dangers to spawn on campsites and encounter maps.  It will also work on campsites from the [u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3234938357]Set up Camp[/url][/u] Mod if you are on a previous version of the game.
+
 Inspired by this mod from Luca: [u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2910004353]Ancient dangers on encounters[/url][/u].
 </description>
 	<modDependencies>
