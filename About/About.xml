@@ -23,6 +23,6 @@ Inspired by this mod from Luca: [u][url=https://steamcommunity.com/sharedfiles/f
 		</li> -->
 	</modDependencies>
 	<loadAfter>
-		<li>syrchalis.setupcamp</li>
+		<li>Alias.SetUpCamp</li>
 	</loadAfter>
 </ModMetaData>

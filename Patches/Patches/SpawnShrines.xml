@@ -8,10 +8,8 @@
     </value>
   </Operation>
 
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Set Up Camp</li>
-		</mods>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/MapGeneratorDef[defName="Syr_SetUpCamp"]</xpath>
 		
         <match Class="PatchOperationSequence">
             <operations>
