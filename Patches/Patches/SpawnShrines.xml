@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/MapGeneratorDef[defName = "Encounter"]/genSteps</xpath>
-    <value>
-      <li>ScatterShrines</li>
-    </value>
+  <!-- Encounter maps: add ScatterShrines only if not already present -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/MapGeneratorDef[defName="Encounter"]/genSteps/li[text()="ScatterShrines"]</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/MapGeneratorDef[defName="Encounter"]/genSteps</xpath>
+      <value>
+        <li>ScatterShrines</li>
+      </value>
+    </nomatch>
   </Operation>
 
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/MapGeneratorDef[defName="Syr_SetUpCamp"]</xpath>
-		
-        <match Class="PatchOperationSequence">
-            <operations>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/MapGeneratorDef[defName = "Syr_SetUpCamp"]/genSteps</xpath>
-					<value>
-						<li>ScatterShrines</li>
-					</value>
-				</li>
-            </operations>
-        </match>
-    </Operation>
-	
+  <!-- Set Up Camp 1.5 only -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/MapGeneratorDef[defName="Syr_SetUpCamp"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>/Defs/MapGeneratorDef[defName="Syr_SetUpCamp"]/genSteps/li[text()="ScatterShrines"]</xpath>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/MapGeneratorDef[defName="Syr_SetUpCamp"]/genSteps</xpath>
+        <value>
+          <li>ScatterShrines</li>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
 </Patch>
